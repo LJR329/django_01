@@ -55,7 +55,7 @@ ROOT_URLCONF = 'bookmanager.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],  # 模板文件
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -76,8 +76,13 @@ WSGI_APPLICATION = 'bookmanager.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'Book',
+        'USER': 'root',
+        'HOST': 'localhost',
+        'PASSWORD': 'mysql',
+        'PORT': 3306,
+
     }
 }
 
@@ -119,3 +124,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
+
+
+# 告知系统我们的图片在哪
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static')
+]
