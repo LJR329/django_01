@@ -103,3 +103,18 @@ BookInfo.objects.aggregate(Count('readcount'))
 # 排序
 BookInfo.objects.all().order_by('readcount')
 
+#关联查询
+
+book = BookInfo.objects.get(id=1)
+book.peopleinfo_set.all()
+
+person = PeopleInfo.objects.get(id=1)
+person.book
+
+person = PeopleInfo.objects.get(id=1)
+person.book_id
+
+book = BookInfo.objects.filter(peopleinfo__description__contains='八')
+
+PeopleInfo.objects.filter(book__name='天龙八部')
+PeopleInfo.objects.filter(book__readcount__gt=30)
