@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="90ccc575-259b-4975-8863-23f56b8660e3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/book/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/book/views.py" afterDir="false" />
-    </list>
+    <list default="true" id="90ccc575-259b-4975-8863-23f56b8660e3" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,8 +46,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/book/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="258">
-              <caret line="126" column="17" lean-forward="true" selection-start-line="126" selection-start-column="17" selection-end-line="126" selection-end-column="17" />
+            <state relative-caret-position="93">
+              <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
               </folding>
@@ -86,10 +84,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="51" />
-    <option name="y" value="27" />
-    <option name="width" value="673" />
-    <option name="height" value="306" />
+    <option name="x" value="1" />
+    <option name="y" value="25" />
+    <option name="width" value="674" />
+    <option name="height" value="217" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -183,15 +181,15 @@
       <updated>1600783353669</updated>
       <workItem from="1600783355065" duration="7804000" />
       <workItem from="1600913395952" duration="9275000" />
-      <workItem from="1600939968703" duration="7678000" />
+      <workItem from="1600939968703" duration="8915000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24757000" />
+    <option name="totallyTimeSpent" value="25994000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="51" y="25" width="601" height="586" extended-state="6" />
+    <frame x="51" y="25" width="624" height="586" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.5576923" />
@@ -208,7 +206,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.46606335" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.46563193" />
       <window_info anchor="bottom" id="Python Console" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -287,8 +285,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/book/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="258">
-          <caret line="126" column="17" lean-forward="true" selection-start-line="126" selection-start-column="17" selection-end-line="126" selection-end-column="17" />
+        <state relative-caret-position="93">
+          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
           <folding>
             <element signature="e#0#35#0" expanded="true" />
           </folding>
