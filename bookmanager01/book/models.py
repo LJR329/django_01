@@ -16,15 +16,38 @@ from django.db import models
 
 class BookInfo(models.Model):
     name = models.CharField(max_length=20, unique=True)
-    pub_data = models.DateField(null=True, )
+    pub_date = models.DateField(null=True)
     readcount = models.IntegerField(default=0)
     commentcount = models.IntegerField(default=0)
-    is_delete = models.BooleanField(default=0)
+    is_delete = models.BooleanField(default=False)
 
     class Meta:
         db_table = 'bookinfo'  # 修改名字
-        verbose_name = '书记管理' # admin 站点管理 了解
+        verbose_name = '图书管理'  # admin 站点管理 了解
+
+    def __str__(self):
+        return self.name
 
 
 class PeopleInfo(models.Model):
-    pass
+    # 定义有序列表
+    GENDER_CHOICE = (
+        (1, 'male'),
+        (2, 'female'),
+    )
+    name = models.CharField(max_length=20, unique=True)
+    gender = models.SmallIntegerField(choices=GENDER_CHOICE, default=1)
+    description = models.CharField(max_length=100, null=True)
+    is_delete = models.BooleanField(default=False)
+
+    # 系统会自动为外键添加_id
+    # 外键的级联操作  详见课件
+    # 1对多  书籍  对  人物
+    book = models.ForeignKey(BookInfo, on_delete=models.CASCADE)
+
+    class Meta:
+        db_table = 'peopleinfo'
+        verbose_name = '人员信息'  # admin 站点管理 了解
+
+    def __str__(self):
+        return self.name
