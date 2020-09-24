@@ -77,7 +77,7 @@ WSGI_APPLICATION = 'bookmanager01.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'book01',
+        'NAME': 'shunyi_42',
         'USER': 'root',
         'PASSWORD': 'mysql',
         'PORT': 3306,
