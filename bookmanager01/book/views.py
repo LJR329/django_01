@@ -98,4 +98,8 @@ BookInfo.objects.aggregate(Count('readcount'))
 # PeopleInfo.objects.filter(book__name='天龙八部')
 # PeopleInfo.objects.filter(book__name__exact='天龙八部'
 #                                      ''
-#                                             '')
+#            '')
+
+# 排序
+BookInfo.objects.all().order_by('readcount')
+
