@@ -76,6 +76,12 @@ BookInfo.objects.filter(~Q(id=3))
 BookInfo.objects.exclude(id=3)
 # # 聚合函数
 from django.db.models import Sum, Max, Min, Avg, Count
+
+BookInfo.objects.aggregate(Sum('readcount'))
+BookInfo.objects.aggregate(Max('readcount'))
+BookInfo.objects.aggregate(Min('readcount'))
+BookInfo.objects.aggregate(Avg("readcount"))
+BookInfo.objects.aggregate(Count('readcount'))
 # BookInfo.objects.aggregate(Sum('readcount'))  # 聚合--总数
 # BookInfo.objects.all().order_by('-readcount')  # 排序
 # # 两个表的操作
