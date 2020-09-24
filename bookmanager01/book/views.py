@@ -118,3 +118,10 @@ book = BookInfo.objects.filter(peopleinfo__description__contains='八')
 
 PeopleInfo.objects.filter(book__name='天龙八部')
 PeopleInfo.objects.filter(book__readcount__gt=30)
+
+BookInfo.objects.all()[:2]
+books = BookInfo.objects.all()
+from django.core.paginator import Paginator
+p = Paginator(books, 2)
+p_b = p.page(1)
+t_p = p.num_pages
