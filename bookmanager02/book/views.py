@@ -10,6 +10,15 @@ def index(request, cat_id, goods_id):
 
 
 # 查询字符串
+# def string(request):
+#     print(request.GET)
+#     return HttpResponse('ok')
+#
+
+# 查询字符串  一键多值
 def string(request):
-    print(request.GET)
+    query = request.GET
+    print(query)
+    print(query.get('kw'))
+    print(query.getlist('kw'))
     return HttpResponse('ok')
