@@ -122,7 +122,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../bookmanager02" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
@@ -181,16 +181,15 @@
       <updated>1600783353669</updated>
       <workItem from="1600783355065" duration="7804000" />
       <workItem from="1600913395952" duration="9275000" />
-      <workItem from="1600939968703" duration="8915000" />
+      <workItem from="1600939968703" duration="9042000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25994000" />
+    <option name="totallyTimeSpent" value="26121000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="51" y="25" width="624" height="586" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.5576923" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
