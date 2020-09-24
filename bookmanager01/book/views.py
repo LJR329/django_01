@@ -60,12 +60,22 @@ BookInfo.objects.filter(id__gt=3)
 BookInfo.objects.filter(pub_date__year='1980')
 # 查询1990年1月1日后发表的图书
 BookInfo.objects.filter(pub_date__gt='1990-1-1')
-from django.db.models import F
+from django.db.models import F, Q
 
 BookInfo.objects.filter(readcount__gt=F('commentcount'))
+BookInfo.objects.filter(readcount__gt=F('commentcount') * 2)
 
+BookInfo.objects.filter(readcount__gt=20, id__lt=3)
+BookInfo.objects.filter(readcount__gt=20).filter(id__lt=3)
+
+BookInfo.objects.filter(Q(readcount__gt=20))
+
+BookInfo.objects.filter(Q(readcount__gt=20) | Q(id__lt=3))
+
+BookInfo.objects.filter(~Q(id=3))
+BookInfo.objects.exclude(id=3)
 # # 聚合函数
-# from django.db.models import Sum, Max, Min, Avg, Count
+from django.db.models import Sum, Max, Min, Avg, Count
 # BookInfo.objects.aggregate(Sum('readcount'))  # 聚合--总数
 # BookInfo.objects.all().order_by('-readcount')  # 排序
 # # 两个表的操作
