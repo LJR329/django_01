@@ -1,5 +1,5 @@
 from django.urls import path
-from book.views import index
+from book import views
 urlpatterns = [
-    path('create/'),
+    path('create/', views.creat),
 ]

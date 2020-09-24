@@ -5,8 +5,6 @@ from book.models import BookInfo
 
 
 def creat(request):
-    book = BookInfo.objects.create(
-        name='create',
-
-    )
+    a = request.GET
+    print(a)
     return HttpResponse('ok')
