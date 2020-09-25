@@ -94,6 +94,14 @@ def set_session(request):
     user_id = 1
     request.session['user_id'] = user_id
     request.session['username'] = username
+
+    # clear删除session里数据key有保留
+    # request.session.clear()
+    # flush删除所有数据包括key
+    # request.session.flush()
+
+    # 设置session过期时间
+    request.session.set_expiry(3600)
     return HttpResponse('ok')
 
 
@@ -102,3 +110,34 @@ def get_session(request):
     username = request.session.get('username')
     content = f"{user_id}, {username}"
     return HttpResponse(content)
+
+
+def login(request):
+    if request.method == "GET":
+        return HttpResponse('get')
+    else:
+        return HttpResponse('post')
+
+
+"""
+类视图的定义
+
+class 类视图名字(View):
+    def get(self.request):
+        :return HttpResponse('ss')
+        
+    def http_method_lower(self.request):
+        return HttpResponse('dd')
+        
+1. 继承view
+2. 
+"""
+from django.views import View
+
+
+class LoginView(View):
+    def get(self, request):
+        return HttpResponse('get')
+
+    def post(self, request):
+        return HttpResponse('post')
