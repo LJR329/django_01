@@ -76,13 +76,13 @@ def set_cookie(request):
     username = request.GET.get('username')
     # 设置cookie  通过响应对象set_cookie
     response = HttpResponse('cookie')
-    # 临时cookie
-    response.set_cookie('name', username)
+    # 设置cookie
+    response.set_cookie('name', username, max_age=360000)  # max_age 是一个秒数 cookie的时间
+    # response.delete_cookie('name')  # 删除cookie
     return response
-
 
 
 def get_cookie(request):
     # 获取cookie信息
-    cookies=request.COOKIES.get('name')
+    cookies = request.COOKIES.get('name')
     return HttpResponse(cookies)
