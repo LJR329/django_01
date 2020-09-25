@@ -25,5 +25,7 @@ urlpatterns = [
     path('register/', views.register),
     path('json/', views.json1),
     path('method/', views.method),
-    path('res/', views.response)
+    # path('res/', views.response),
+    path('set_cookie/', views.set_cookie),
+    path('get_cookie/', views.get_cookie)
 ]
