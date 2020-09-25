@@ -41,8 +41,21 @@ def set_cookie(request):
     username = request.GET.get('username')
     resp = HttpResponse('ok')
     resp.set_cookie('name', username)
+    # resp.delete_cookie('name')  # 删除
     return resp
+
 
 def get_cookie(request):
     name = request.COOKIES.get('name')
     return HttpResponse(name)
+
+
+def set_session(request):
+    name = request.GET.get('name')
+    request.session['name'] = name
+
+    return HttpResponse('ok')
+
+def get_session(request):
+    name = request.session.get('name')
+    return HttpResponse(f'{name}')
