@@ -141,3 +141,5 @@ class LoginView(View):
 
     def post(self, request):
         return HttpResponse('post')
+
+
