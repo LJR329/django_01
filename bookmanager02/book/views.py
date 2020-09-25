@@ -35,3 +35,30 @@ def json1(request):
     print(json.loads(body))
     print(request.META)
     return HttpResponse('ok')
+
+
+def method(request):
+    print(request.method)
+    return HttpResponse('OK')
+
+
+def response(request):
+    # 1xx
+    # 2xx  200成功
+    # 3xx  重定向
+    # 4xx  请求有问题　404路由有问题　　403权限问题
+    # 5xx  服务器错误
+    # return HttpResponse('ok', status=200)
+    # info = {
+    #     "name": "itcast",
+    #     "addr": "changsha",
+    # }
+    info = [
+        {
+            "name": "itcast",
+            "addr": "changsha",
+        }
+    ]
+    # safe=true 表示data为字典数据
+    return JsonResponse(data=info, safe=False)
+    # return redirect("http://www.baidu.com")  # 重定向
