@@ -3,6 +3,7 @@ from django.http import HttpResponse
 
 
 # Create your views here.
+from django.views import View
 
 
 def index(request):
@@ -56,6 +57,16 @@ def set_session(request):
 
     return HttpResponse('ok')
 
+
 def get_session(request):
     name = request.session.get('name')
     return HttpResponse(f'{name}')
+
+
+class LoginView(View):
+    def post(self, request):
+        return HttpResponse('post')
+
+    def get(self, request):
+        return HttpResponse('get')
+
