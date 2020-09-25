@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse, JsonResponse
+import json
 # Create your views here.
 from book.models import BookInfo
 
@@ -21,4 +22,14 @@ def string(request):
     print(query)
     print(query.get('kw'))
     print(query.getlist('kw'))
+    return HttpResponse('ok')
+
+
+def register(request):
+    return HttpResponse('ok')
+
+
+def json1(request):
+    body = request.body.decode()
+    print(json.loads(body))
     return HttpResponse('ok')
