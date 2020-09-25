@@ -86,3 +86,19 @@ def get_cookie(request):
     # 获取cookie信息
     cookies = request.COOKIES.get('name')
     return HttpResponse(cookies)
+
+
+def set_session(request):
+    username = request.GET.get('username')
+    # 设置session信息
+    user_id = 1
+    request.session['user_id'] = user_id
+    request.session['username'] = username
+    return HttpResponse('ok')
+
+
+def get_session(request):
+    user_id = request.session.get('user_id')  # get没有获取到数据不会报错
+    username = request.session.get('username')
+    content = f"{user_id}, {username}"
+    return HttpResponse(content)
