@@ -24,4 +24,5 @@ urlpatterns = [
     path('string/', views.string),
     path('post/', views.post),
     path('header/', views.header),
+    path('red/', views.redirect1),
 ]

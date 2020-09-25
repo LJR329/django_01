@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse, HttpRequest
 
 
@@ -31,3 +31,7 @@ def header(request):
     print(request.method)
     print(request.user)
     return HttpResponse('ok')
+
+
+def redirect1(request):
+    return redirect('http://www.baidu.com')
