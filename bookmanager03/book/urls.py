@@ -25,4 +25,6 @@ urlpatterns = [
     path('post/', views.post),
     path('header/', views.header),
     path('red/', views.redirect1),
+    path('set_cookie/', views.set_cookie),
+    path('get_cookie/', views.get_cookie),
 ]

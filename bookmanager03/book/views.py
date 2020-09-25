@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from django.http import HttpResponse, HttpRequest
+from django.http import HttpResponse
 
 
 # Create your views here.
@@ -35,3 +35,14 @@ def header(request):
 
 def redirect1(request):
     return redirect('http://www.baidu.com')
+
+
+def set_cookie(request):
+    username = request.GET.get('username')
+    resp = HttpResponse('ok')
+    resp.set_cookie('name', username)
+    return resp
+
+def get_cookie(request):
+    name = request.COOKIES.get('name')
+    return HttpResponse(name)
