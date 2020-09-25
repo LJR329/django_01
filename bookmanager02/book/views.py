@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse, JsonResponse
 import json
 # Create your views here.
@@ -7,6 +7,7 @@ from book.models import BookInfo
 
 # url 路径参数
 def index(request, cat_id, goods_id):
+    print()
     return JsonResponse({'cat_id': cat_id, 'id': goods_id})
 
 
@@ -32,4 +33,5 @@ def register(request):
 def json1(request):
     body = request.body.decode()
     print(json.loads(body))
+    print(request.META)
     return HttpResponse('ok')
