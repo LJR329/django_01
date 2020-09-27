@@ -50,6 +50,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'book.middleware.TestMiddleWare',  # 注册中间件
+    'book.middleware1.Middleware',
 
 ]
 
