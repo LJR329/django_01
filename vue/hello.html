@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+	</head>
+	<body>
+		<div id="app">
+			{{message}}
+			[[message]]
+			<hr />
+			<a :href="next" target="_blank">点击</a>
+			<a href="#" v-if="isLogin">个人中心</a>  //v-if isLogin显示或者不显示
+			<a href="#" v-else> 登录</a>
+			<hr />
+			<a href="#" v-else-if="level === 1">啊哈哈1</a>
+			<a href="#" v-else-if="level === 2">啊哈哈2</a>
+			<a href="#" v-else-if="level === 3">啊哈哈3</a>
+			<a href="#" v-else-if="level === 4">啊哈哈4</a>
+			<a href="#" v-else>啊哈哈5</a>
+			<span v-if='seen'>if</span>
+			<span v-show="seen">show</span>
+			<hr />
+			<ul>
+				<!--<li v-for="(shop, index) in shops">[[shop]][[index]]</li>-->
+				<li v-for="(value,name) in object">[[value]]----[[name]]</li>
+				
+			</ul>
+			<hr />
+			<input type="button"  @click="count += 1" value="点击"/>
+			<span>[[count]]</span>
+			<input type="button"  @click="login" value="点击"/>
+		</div>
+	</body>
+	<script>
+		var app = new Vue({
+			el:'#app',
+			delimiters: ['[[',']]'],  // 用于html接收参数
+			data: {
+				message: 'hello vue',
+				next: 'http://www.itcast.com',
+				isLogin: false,  
+				level: 2,
+				seen: true,
+//				shops: ['a', 'c', 's', 'we']
+				object: {
+			      title: 'How to do lists in Vue',
+			      author: 'Jane Doe',
+			      publishedAt: '2016-04-10'
+			   },
+			    count: 1,
+				
+			},
+			// 定义方法
+			methods: {
+				login: function(){
+					alert('登录')
+				}
+			}
+		})
+		
+	</script>
+</html>

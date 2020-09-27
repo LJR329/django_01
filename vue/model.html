@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	</head>
+	<body>
+		<div id="app">
+			<table border="2px">
+				<tr>
+					<td>用户名</td>
+					<td><input type="text" name="" id="" value="" v-model="username" /></td>  <!--// v-model 双向绑定-->
+				</tr>
+				<tr>
+					<td>密码</td>
+					<td><input type="password" name="" id="" value="" v-model="password"/></td>
+				</tr>
+				<tr>
+					<td>确认密码</td>
+					<td><input type="password" name="" id="" value="" v-model="verifpwd"/></td>
+				</tr>
+				<tr>
+					<td>性别</td>
+					<td><input type="radio" name="1" id="" value="男" v-model="sex"/>男
+					<input type="radio" name="1" id="" value="女" v-model="sex"/>女
+					</td>
+				</tr>
+				<tr>
+					<td>爱好</td>
+					<td>
+						<input type="checkbox" name="" id="" value="aihao" v-model="like"/>爱好
+						<input type="checkbox" name="" id="" value="1" v-model="like"/>爱好1
+						<input type="checkbox" name="" id="" value="2" v-model="like"/>爱好2
+					</td>
+				</tr>
+				<tr>
+					<td>所在城市</td>
+					<td>
+						<select name="" v-model="city">
+							<option value="北京">北京</option>
+							<option value="广州">广州</option>
+							<option value="深圳">深圳</option>
+							
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td>个人简介</td>
+					<td><textarea name="" rows="" cols="" v-model="desc"></textarea></td>
+				</tr>
+			</table>
+			<input type="submit" value="注册" @click="register"/>
+		</div>
+	</body>
+	<script>
+		var app=new Vue({
+			el:'#app',
+			data: {
+				message: 'hello',
+				username:'',
+				password:'',
+				verifpwd: '',
+				sex: '',
+				city: '',
+				like: [],
+				desc: '',
+				
+			},
+			methods: {
+				register: function(){
+					
+					alert(this.username +'--'+ this.password +'--'+ this.verifpwd +'--'+ this.sex +'--'+ this.like+'--'+ this.city  +'--'+ this.desc )  // 使用data变量要使用this
+				}
+			}
+		})
+	</script>
+</html>

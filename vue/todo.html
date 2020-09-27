@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+	</head>
+	<body>
+		<div id="app">
+			<input type="text" name="" id="" value="" v-model="text"/>
+			<input type="button" name="" id="" value="添加" @click="addtodo" />
+			<ul>
+				<li v-for="todo in todos">{{todo}}</li>
+			</ul>
+		</div>
+	</body>
+	<script>
+		var app = new Vue({
+			el: '#app',
+			data:{
+				todos:['学vue', 'django项目', 'flask'],
+				text: '',
+			},
+			methods:{
+				addtodo: function(){
+					this.todos.push(this.text)
+					this.text =''
+				}
+			},
+		})
+		
+		var say = () => {
+			alert('abc')
+		}
+		say()
+	</script>
+</html>
