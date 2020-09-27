@@ -111,8 +111,9 @@ class LoginView(View):
 #         return HttpResponse('post')
 from django.contrib.auth.mixins import LoginRequiredMixin
 
-
 # from django.contrib.auth.mixins import LoginRequiredMixin
+# from django.contrib.auth.mixins import LoginRequiredMixin
+
 
 class OrderView(LoginRequiredMixin, View):
     def get(self, request):
