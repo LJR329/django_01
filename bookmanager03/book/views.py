@@ -82,3 +82,41 @@ class LoginView(View):
 
     def get(self, request):
         return HttpResponse('get')
+
+
+################################################################
+
+"""
+
+我的订单，个人中心页面
+如果登录用户 可以访问
+如果未登录用户  不应该访问  应该跳转到登录页面
+定义一个订单， 个人中心， 类视图
+
+
+"""
+# from django.contrib.auth.mixins import LoginRequiredMixin
+#
+#
+# # LoginRequiredMixin 内部会进行用户是否登录判断 如果没有登录会跳转到accounts页面
+# class OrderView(LoginRequiredMixin, View):
+#
+#     def get(self, request):
+#         # isLogin = False
+#         # if not isLogin:
+#         #     return HttpResponse('你没有登录。。。跳转到登录页面中')
+#         return HttpResponse('get')
+#
+#     def post(self, request):
+#         return HttpResponse('post')
+from django.contrib.auth.mixins import LoginRequiredMixin
+
+
+# from django.contrib.auth.mixins import LoginRequiredMixin
+
+class OrderView(LoginRequiredMixin, View):
+    def get(self, request):
+        return HttpResponse('get')
+
+    def post(self, request):
+        return HttpResponse('post')

@@ -18,7 +18,7 @@ class MobileConverter:
 
 # class Zi:
 #     regx = '1[3-9]\d{9}'
-# 
+#
 #     def to_python(self, value):
 #         return int(value)
 #
@@ -40,5 +40,6 @@ urlpatterns = [
     path('set_session/', views.set_session),
     path('get_session/', views.get_session),
     path('aa/', views.LoginView.as_view()),
+    path('order/', views.OrderView.as_view()),
 
 ]
